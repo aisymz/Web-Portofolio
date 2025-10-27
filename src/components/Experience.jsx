@@ -141,6 +141,15 @@ const Experience = () => {
               <p className="experience-item-subheader">
                 S1 Pendidikan Geografi
               </p>
+              <p
+                style={{
+                  fontSize: "0.9rem",
+                  opacity: 0.8,
+                  marginBottom: "0.5rem",
+                }}
+              >
+                IPK/GPA: 3,45 / 4.00
+              </p>
               <span>2020 - 2024</span>
             </div>
           </motion.li>
