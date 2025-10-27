@@ -1,4 +1,3 @@
-// --- PENAMBAHAN: Import motion ---
 import { motion } from "framer-motion";
 
 const Footer = () => {

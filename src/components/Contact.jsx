@@ -23,26 +23,25 @@ const Contact = () => {
     <motion.section
       id="contact"
       className="section"
-      variants={containerVariants} // <-- TAMBAHKAN INI
-      initial="hidden" // <-- UBAH INI
-      whileInView="visible" // <-- UBAH INI
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
     >
       <motion.h2 variants={itemVariants}>Contact Me</motion.h2>
       <motion.div variants={itemVariants}>
         <TypeAnimation
           sequence={[
-            // Tulis kalimat Anda
             "Saya sangat terbuka untuk diskusi dan kolaborasi. Hubungi saya melalui:",
-            5000, // Tunggu 5 detik sebelum mengulang (sesuaikan durasi)
-            "", // Hapus
-            1000, // Jeda hapus
+            5000,
+            "",
+            1000,
           ]}
-          wrapper="p" // Gunakan tag <p> sebagai pembungkus
-          speed={70} // Sesuaikan kecepatan (nilai lebih tinggi = lebih lambat)
-          style={{ display: "inline-block", marginBottom: "1rem" }} // Style agar mirip <p> asli
-          repeat={Infinity} // Ulangi selamanya
-          cursor={false} // Hilangkan kursor '|'
+          wrapper="p"
+          speed={70}
+          style={{ display: "inline-block", marginBottom: "1rem" }}
+          repeat={Infinity}
+          cursor={false}
         />
       </motion.div>
 

@@ -10,7 +10,7 @@ const itemVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: "spring", stiffness: 100 }, // Transisi 'spring'
+    transition: { type: "spring", stiffness: 100 },
   },
 };
 
