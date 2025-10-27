@@ -598,11 +598,7 @@ body.dark .project-card h3 {
   font-size: 0.95rem;
   margin-bottom: 1rem;
   line-height: 1.4;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
 }
 
 /* Kontainer Tech Stack di Kartu Proyek */

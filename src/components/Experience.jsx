@@ -189,7 +189,7 @@ const Experience = () => {
               <p className="experience-item-subheader">Guru Geografi</p>
               <ul className="experience-item-details">
                 <li>
-                  Merancang dan mengembangkan perangkatpembelajaran yang
+                  Merancang dan mengembangkan perangkat pembelajaran yang
                   terstruktur untuk menyederhanakan konsep-konsep kompleks bagi
                   lebih dari 90 siswa di 5 kelas.
                 </li>
