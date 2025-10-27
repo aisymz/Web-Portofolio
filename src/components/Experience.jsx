@@ -148,7 +148,7 @@ const Experience = () => {
                   marginBottom: "0.5rem",
                 }}
               >
-                IPK/GPA: 3,45 / 4.00
+                IPK / GPA: 3,45 / 4.00
               </p>
               <span>2020 - 2024</span>
             </div>
