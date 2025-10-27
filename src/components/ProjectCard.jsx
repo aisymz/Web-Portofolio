@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import todoImage from "../assets/Photo/to-do-app.png";
 import videoImage from "../assets/Photo/video-app.png";
+import portofolioImage from "../assets/Photo/portofolio.png";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50, scale: 0.9 },
@@ -18,6 +19,8 @@ const customDescriptions = {
     "Mengembangkan aplikasi front-end untuk manajemen tugas harian responsif. Dibangun dengan HTML, CSS dan JavaScript murni, berfokus pada manipulasi DOM yang dinamis dan interaktif.",
   "Aplikasi-Video-Belajar":
     "Aplikasi web video belajar interaktif menggunakan React dan Redux Toolkit. Dilengkapi autentikasi pengguna dan dashboard admin dengan fungsionalitas CRUD.",
+  "Web-Portofolio":
+    "Portofolio pribadi interaktif yang menampilkan proyek, pengalaman, dan keahlian. Dibuat dengan React, Redux untuk state management, dan Framer Motion untuk animasi.",
 };
 
 const customTechStacks = {
@@ -30,11 +33,20 @@ const customTechStacks = {
     "MockAPI",
     "Local Storage",
   ],
+
+  "Web-Portofolio": [
+    "React",
+    "Redux Toolkit",
+    "Framer Motion",
+    "Axios",
+    "GitHub API",
+  ],
 };
 
 const customProjectImages = {
   "Aplikasi-To-Do-List": todoImage,
   "Aplikasi-Video-Belajar": videoImage,
+  "Web-Portofolio": portofolioImage,
 };
 
 const ProjectCard = ({ project }) => {
