@@ -59,6 +59,7 @@ a {
   text-decoration: none;
   transition: color 0.25s;
 }
+
 a:hover {
   color: var(--secondary-color);
 }
@@ -76,6 +77,7 @@ button {
   transition: border-color 0.25s, background-color 0.25s;
   box-shadow: var(--shadow);
 }
+
 button:hover {
   border-color: var(--primary-color);
 }

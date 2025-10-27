@@ -1,12 +1,9 @@
-// App.jsx
-
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
-
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -24,9 +21,7 @@ function App() {
       <main>
         <Hero />
         <About />
-
         <Experience />
-
         <Contact />
       </main>
       <Footer />
