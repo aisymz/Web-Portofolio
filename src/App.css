@@ -1,0 +1,829 @@
+/* Animasi Gradien Latar Belakang */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Variabel Global dan Tema */
+:root {
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --text-gradient: linear-gradient(90deg, #b388ff, var(--primary-color));
+}
+
+/* Pengaturan Body Utama (Light Mode) */
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(-45deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(230, 230, 230, 0.5),
+      rgba(255, 255, 255, 0.3)),
+    url("/light-bg.png");
+  background-size:
+    300% 300%,
+    cover;
+  background-attachment: fixed, fixed;
+  background-position:
+    0% 50%,
+    center;
+  background-repeat: no-repeat;
+  animation: gradient-animation 15s ease infinite;
+}
+
+/* Pengaturan Body Utama (Dark Mode) */
+body.dark {
+  background-image:
+    linear-gradient(-45deg,
+      rgba(40, 38, 78, 0.4),
+      rgba(17, 17, 30, 0.6),
+      rgba(40, 38, 78, 0.4)),
+    url("/dark-bg.png");
+  background-size:
+    300% 300%,
+    cover;
+  background-attachment: fixed, fixed;
+  background-position:
+    0% 50%,
+    center;
+  background-repeat: no-repeat;
+  animation: gradient-animation 15s ease infinite;
+  --nav-bg: rgba(26, 26, 26, 0.393) !important;
+  --card-bg: rgba(255, 255, 255, 0.029) !important;
+  backdrop-filter: blur(2px);
+  --text-gradient: linear-gradient(90deg, #b388ff, var(--primary-color));
+}
+
+/* Penampung Utama Aplikasi */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Pengaturan Section Umum */
+.section {
+  padding: 4rem 0;
+  border-bottom: none;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+/* Judul Section (Light & Dark Mode) */
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+body.dark .section h2 {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Pengaturan Header / Navbar */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo di Header */
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Navigasi Link di Header */
+.header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav a {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Tombol Ganti Tema (Dark/Light) */
+.header .theme-toggle {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Kontainer Bagian Kanan Header */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Tombol Menu Mobile (Hamburger) */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: rgb(96, 95, 95);
+  cursor: pointer;
+  z-index: 1002;
+}
+
+body.dark .mobile-menu-toggle {
+  color: #f4f4f4;
+}
+
+/* Pengaturan Section Hero (Bagian Atas) */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+/* Judul Nama di Section Hero */
+.hero h1 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+/* Subjudul/Profesi di Section Hero (Light & Dark Mode) */
+.hero .subtitle {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  display: inline-block;
+}
+
+body.dark .hero .subtitle {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Deskripsi Singkat di Section Hero */
+.hero .description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+/* Foto Profil */
+.profile-picture {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-position: center 15%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+body.dark .profile-picture {
+  border: 4px solid white;
+}
+
+/* Konten di Section About */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: left;
+  align-items: center;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Grid untuk Hard Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem;
+  padding-left: 0;
+}
+
+/* Kartu untuk Setiap Hard Skill */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.skill-card svg {
+  font-size: 2.5rem;
+}
+
+.skill-card span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Daftar untuk Soft Skills & Bahasa */
+.soft-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-left: 0;
+}
+
+.soft-skill-tag {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  opacity: 0.9;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasi Mengambang untuk Soft Skill */
+@keyframes softFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Kontainer Awan untuk Soft Skills */
+.skill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+/* Tag di dalam Awan Soft Skill */
+.skill-tag-cloud {
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: softFloat 5s ease-in-out infinite;
+  background-color: var(--bg-color);
+}
+
+body.dark .skill-tag-cloud {
+  background-color: rgba(26, 26, 26, 0.5);
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border: 1px solid rgba(100, 108, 255, 0.3);
+}
+
+body.dark .skill-tag-cloud:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Variasi Ukuran & Animasi Tag Awan */
+.skill-tag-cloud:nth-child(6n + 1) {
+  font-size: 1.2rem;
+  opacity: 1;
+  animation-delay: 0s;
+}
+
+.skill-tag-cloud:nth-child(6n + 2) {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  animation-delay: -1s;
+}
+
+.skill-tag-cloud:nth-child(6n + 3) {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  animation-delay: -2s;
+}
+
+.skill-tag-cloud:nth-child(6n + 4) {
+  font-size: 1rem;
+  opacity: 1;
+  animation-delay: -3s;
+}
+
+.skill-tag-cloud:nth-child(6n + 5) {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation-delay: -4s;
+}
+
+.skill-tag-cloud:nth-child(6n + 6) {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  animation-delay: -5s;
+}
+
+/* Kategori di Section Experience */
+.experience-category {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.experience-category h3 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+/* Daftar untuk Item Experience & Organisasi */
+.experience-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Kartu untuk Setiap Item Experience */
+.experience-item {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid transparent;
+  text-align: left;
+}
+
+.experience-item-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.experience-item-content>span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.8;
+  background-color: var(--bg-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* Header di dalam Kartu Experience */
+.experience-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Judul di Header Kartu Experience (Light & Dark Mode) */
+.experience-item-header h4 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--text-color);
+}
+
+body.dark .experience-item-header h4 {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.experience-item-header span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.8;
+  background-color: var(--bg-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+/* Subjudul di Kartu Experience */
+.experience-item-subheader {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+  opacity: 0.9;
+}
+
+/* Deskripsi di Kartu Experience */
+.experience-item-description {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Detail Poin-poin di Kartu Experience */
+.experience-item-details {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.experience-item-details li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+  line-height: 1.4;
+}
+
+.experience-item-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Grid untuk Kartu Proyek & Organisasi */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.organization-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Kartu untuk Setiap Proyek */
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 0;
+  text-align: left;
+  box-shadow: var(--shadow);
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Gambar di Kartu Proyek */
+.project-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Konten di dalam Kartu Proyek */
+.project-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Kontainer Link (Live Demo, GitHub) di Kartu Proyek */
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.project-button-live {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.project-button-github {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Judul di Kartu Proyek (Light & Dark Mode) */
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+body.dark .project-card h3 {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Deskripsi di Kartu Proyek */
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Kontainer Tech Stack di Kartu Proyek */
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+/* Tag untuk Setiap Teknologi */
+.tech-tag {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Tag Teknologi (Dark Mode) */
+body.dark .tech-tag {
+  background: linear-gradient(135deg,
+      rgba(20, 20, 40, 0.7),
+      rgba(15, 15, 30, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--text-gradient);
+  opacity: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid rgba(100, 108, 255, 0.2);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Efek Hover Tag Teknologi (Dark Mode) */
+body.dark .tech-tag:hover {
+  background: var(--primary-color);
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  background-image: none;
+  color: #fff;
+  -webkit-text-fill-color: initial;
+  transform: scale(1.1) rotate(-3deg);
+}
+
+/* Judul "Tech Stack" */
+.tech-stack-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin-right: 0.25rem;
+}
+
+/* Kontainer Link Kontak */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.contact-links a {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Pengaturan Footer */
+.footer {
+  padding: 2rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Span Tanggal/Periode (Dark Mode) */
+body.dark .experience-item-content>span {
+  background: linear-gradient(135deg,
+      rgba(20, 20, 40, 0.7),
+      rgba(15, 15, 30, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--text-gradient);
+  opacity: 1;
+  border: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+/* Garis Pemisah di Footer */
+.footer hr {
+  border: none;
+  height: 1px;
+  background: #333333;
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
+}
+
+body.dark .footer hr {
+  background: var(--text-gradient);
+  opacity: 0.5;
+}
+
+/* Pengaturan Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .header .logo {
+    font-size: 1.2rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow);
+    padding: 1.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1001;
+    transition:
+      transform 0.3s ease-out,
+      opacity 0.3s ease-out;
+  }
+
+  .header nav.mobile-nav-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .header nav a {
+    font-size: 1.1rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .experience-category h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .experience-item-content {
+    width: 100%;
+  }
+
+  .experience-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-item-content>span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.8;
+    background-color: var(--bg-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    margin-top: auto;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+  .experience-item-details {
+    padding-left: 0;
+    text-align: left;
+  }
+}
