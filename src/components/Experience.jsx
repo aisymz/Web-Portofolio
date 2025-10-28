@@ -211,7 +211,7 @@ const Experience = () => {
                   Menganalisis dan mengevaluasi hasil belajar serta memberikan
                   umpan balik (feedback) yang konstruktif untuk mendukung
                   perkembangan setiap peserta didik. Berkontribusi aktif dalam
-                  perencanaan dan pelaksanaan ekstrakulikuler
+                  perencanaan dan pelaksanaan ekstrakulikuler.
                 </li>
               </ul>
               <span>Februari - Juli 2023</span>
@@ -290,7 +290,7 @@ const Experience = () => {
                   {" "}
                   Memastikan semua aktivitas berjalan sesuai prosedur yang
                   ditetapkan, serta proaktif dalam menyelesaikan masalah
-                  (problem solving) yang muncul di lapangan
+                  (problem solving) yang muncul di lapangan.
                 </li>
               </ul>
               <span>2022 - 2023</span>

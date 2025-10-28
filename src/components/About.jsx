@@ -37,7 +37,7 @@ const About = () => {
             membangun antarmuka pengguna (UI) yang responsif, intuitif dan
             fungsional. Berpengalaman dalam mengembangkan aplikasi dari nol
             menggunakan React.js dan mengintegrasikannya dengan sumber data
-            melalui REST API
+            melalui REST API.
           </p>
         </motion.div>
       </div>

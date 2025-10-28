@@ -733,6 +733,11 @@ body.dark .footer hr {
 
 /* Pengaturan Responsif untuk Mobile */
 @media (max-width: 768px) {
+
+  main {
+    padding-top: 1.2rem;
+  }
+
   .header {
     padding: 1rem 1.5rem;
   }
