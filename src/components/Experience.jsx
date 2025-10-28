@@ -136,6 +136,25 @@ const Experience = () => {
           >
             <div className="experience-item-content">
               <div className="experience-item-header">
+                <h4>Bootcamp Harisenin</h4>
+              </div>
+              <p className="experience-item-subheader">
+                Full Stack Web Developer
+              </p>
+              <span>Juni - November 2025</span>
+            </div>
+          </motion.li>
+          <motion.li
+            className="experience-item"
+            variants={itemVariants}
+            whileHover={{
+              y: -5,
+              borderColor: "var(--primary-color)",
+              transition: { type: "spring", stiffness: 300 },
+            }}
+          >
+            <div className="experience-item-content">
+              <div className="experience-item-header">
                 <h4>Universitas Pendidikan Indonesia</h4>
               </div>
               <p className="experience-item-subheader">
@@ -151,25 +170,6 @@ const Experience = () => {
                 IPK / GPA: 3,45 / 4.00
               </p>
               <span>2020 - 2024</span>
-            </div>
-          </motion.li>
-          <motion.li
-            className="experience-item"
-            variants={itemVariants}
-            whileHover={{
-              y: -5,
-              borderColor: "var(--primary-color)",
-              transition: { type: "spring", stiffness: 300 },
-            }}
-          >
-            <div className="experience-item-content">
-              <div className="experience-item-header">
-                <h4>Bootcamp Harisenin</h4>
-              </div>
-              <p className="experience-item-subheader">
-                Full Stack Web Developer
-              </p>
-              <span>Juni - November 2025</span>
             </div>
           </motion.li>
         </ul>

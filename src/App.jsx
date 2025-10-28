@@ -21,7 +21,10 @@ function App() {
       <main>
         <Hero />
         <About />
+        <div style={{ height: "4rem" }}></div> {/* <-- TAMBAHKAN INI */}
         <Experience />
+        {/* Jarak sebelum Contact */}
+        <div style={{ height: "4rem" }}></div> {/* <-- TAMBAHKAN INI */}
         <Contact />
       </main>
       <Footer />

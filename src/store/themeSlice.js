@@ -3,7 +3,7 @@ import {
 } from "@reduxjs/toolkit";
 
 const initialState = {
-    theme: localStorage.getItem('theme') || 'dark',
+    theme: localStorage.getItem('theme') || 'light',
 };
 
 const themeSlice = createSlice({

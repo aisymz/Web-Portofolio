@@ -82,6 +82,10 @@ body.dark {
   min-height: 100vh;
 }
 
+main {
+  padding-top: 5rem;
+}
+
 /* Pengaturan Section Umum */
 .section {
   padding: 3rem 0;
@@ -340,11 +344,11 @@ body.dark .profile-picture {
 
 body.dark .skill-tag-cloud {
   background-color: rgba(26, 26, 26, 0.5);
-  background: var(--text-gradient);
+  background: #f4f4f4;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  border: 1px solid rgba(100, 108, 255, 0.3);
+  border: 1px solid rgba(205, 205, 205, 0.3);
 }
 
 body.dark .skill-tag-cloud:hover {
@@ -718,6 +722,15 @@ body.dark .footer hr {
   opacity: 0.5;
 }
 
+#about,
+#experience {
+  margin-bottom: -8rem;
+}
+
+#contact {
+  padding-bottom: 4rem;
+}
+
 /* Pengaturan Responsif untuk Mobile */
 @media (max-width: 768px) {
   .header {
@@ -828,4 +841,25 @@ body.dark .footer hr {
     text-align: left;
   }
 
+  .experience-item-details {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .projects-grid,
+  .organization-grid {
+    gap: 3.3rem;
+  }
+
+  #experience>.experience-category:nth-of-type(4) .experience-list .experience-item {
+    margin-bottom: 3.1rem;
+  }
+
+  #experience>.experience-category:nth-of-type(4) .experience-list .experience-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .organization-grid .experience-item {
+    margin-bottom: 0;
+  }
 }
