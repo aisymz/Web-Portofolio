@@ -23,7 +23,6 @@ function App() {
         <About />
         <div style={{ height: "4rem" }}></div>
         <Experience />
-        {/* Jarak sebelum Contact */}
         <div style={{ height: "4rem" }}></div>
         <Contact />
       </main>

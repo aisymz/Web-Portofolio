@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profilePicture from "../assets/Profile.jpg";
+import profilePicture from "../assets/Photo/Profile.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
