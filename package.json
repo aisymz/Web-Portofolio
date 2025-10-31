@@ -3,10 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://aisymz.github.io/Web-Portofolio",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages --repo https://github.com/aisymz/Web-Portofolio.git -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
