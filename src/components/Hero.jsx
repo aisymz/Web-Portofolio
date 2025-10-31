@@ -90,7 +90,7 @@ const Hero = () => {
           Projects Me
         </motion.a>
         <motion.a
-          href="/CV_A'isy_Muhammad_Zain.pdf"
+          href="CV_A'isy_Muhammad_Zain.pdf"
           download
           className="cta-button secondary"
           whileHover={{

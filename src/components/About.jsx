@@ -35,9 +35,9 @@ const About = () => {
             bootcamp intensif Full Stack Developer di Harisenin, saya menemukan
             minat mendalam menjadi Front-End Developer. Saya bersemangat dalam
             membangun antarmuka pengguna (UI) yang responsif, intuitif dan
-            fungsional. Berpengalaman dalam mengembangkan aplikasi dari nol
-            menggunakan React.js dan mengintegrasikannya dengan sumber data
-            melalui REST API.
+            fungsional. Berpengalaman dalam mengembangkan aplikasi menggunakan
+            React.js dan mengintegrasikannya dengan sumber data melalui REST
+            API.
           </p>
         </motion.div>
       </div>
