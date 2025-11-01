@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Projects from "./Projects";
+import vscodelogo from "../assets/Photo/vscode.png";
 
 import { FaReact, FaGitAlt } from "react-icons/fa";
 import {
@@ -33,6 +34,10 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
   { name: "Axios", icon: <SiAxios color="#5A29E4" /> },
   { name: "Git", icon: <FaGitAlt color="#F05032" /> },
+  {
+    name: "VS Code",
+    icon: <img src={vscodelogo} alt="Vs Code Logo" className="skill-logo" />,
+  },
 ];
 
 const softSkills = [
