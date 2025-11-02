@@ -8,7 +8,8 @@ const GITHUB_API_URL = 'https://api.github.com/users/aisymz/repos?sort=updated&d
 
 export const fetchProjects = createAsyncThunk('projects/fetchProjects', async () => {
   const response = await axios.get(GITHUB_API_URL);
-  return response.data.slice(0, 6);
+  const filteredRepos = response.data.filter(repo => repo.name !== 'aisymz');
+  return filteredRepos.slice(0, 6);
 });
 
 const initialState = {
