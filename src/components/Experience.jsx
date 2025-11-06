@@ -288,8 +288,8 @@ const Experience = () => {
                 <li>
                   {" "}
                   Mengkoordinasikan logistik dan alur kegiatan lapangan untuk
-                  peserta di dua lokasi di Desa Wisata Dieng (KKL Tahap 1) dan
-                  Provinsi Bali (KKL Tahap 2).
+                  peserta di dua lokasi di Desa Wisata Dieng (KKL Tahap 2) dan
+                  Provinsi Bali (KKL Tahap 3).
                 </li>
                 <li>
                   {" "}
